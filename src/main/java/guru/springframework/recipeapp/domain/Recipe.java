@@ -19,10 +19,8 @@ public class Recipe {
     private String directions;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Set<Ingredient> ingredients;
-
     @Lob
     private Byte[] image;
-
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
 
